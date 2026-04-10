@@ -8,6 +8,50 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* ABOUT SECTION LAYOUT */
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* HEADSHOT (BIG CIRCLE) */
+.about-pic {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent-2);
+  box-shadow: var(--shadow);
+}
+
+/* TEXT */
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* RUNNING SECTION */
+.running-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* RUNNING IMAGE */
+.running-pic {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* CAPTION */
+.running-caption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
  :root {
   --bg: #faf7fb;
   --bg-soft: #f2f6fb;
@@ -413,16 +457,6 @@
           <p class="lead">
             I’m Julia Monson, a Business Analytics and Information Systems student building practical projects across Power BI, SQL, Python, and database systems. My portfolio is meant to show the projects, tools, and problem-solving skills I’ve built through coursework, internships, and independent work.
           </p>
-          <div class="about-flex">
-  <img src="images/headshot.JPG" alt="Julia Monson headshot" class="about-pic">
-
-  <div class="about-text">
-    <p>
-      I’m a Business Analytics & Information Systems student with experience in SQL, Power BI, and data analysis.
-      I enjoy working with real-world datasets to uncover trends and build meaningful insights.
-    </p>
-  </div>
-</div>
           <div class="cta-row">
             <a class="button primary" href="#projects">View My Work</a>
             <a class="button secondary" href="https://github.com/jewlzmonson" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -710,13 +744,28 @@
       </div>
     </section>
 
-    <section id="about">
-      <div class="container about-wrap">
-        <div>
-          <div class="section-head">
-            <div>
-              <h2>About Me</h2>
-              <p>I’m building a career in analytics by combining technical skill, systems thinking, and a strong work ethic.</p>
+    <div class="about-flex">
+
+  <!-- HEADSHOT -->
+  <img src="images/headshot.JPG" alt="Julia Monson headshot" class="about-pic">
+
+  <!-- TEXT -->
+  <div class="about-text">
+    <p>
+      I’m a Business Analytics & Information Systems student with experience in SQL, Power BI, and data analysis.
+      I enjoy working with real-world datasets to uncover trends and build meaningful insights.
+    </p>
+  </div>
+
+</div>
+
+<!-- RUNNING PHOTO -->
+<div class="running-section">
+  <img src="images/running.JPG" alt="Julia running" class="running-pic">
+  <p class="running-caption">
+    Outside of academics, I’m a long-distance runner, which has strengthened my discipline, consistency, and goal-oriented mindset.
+  </p>
+</div>
             </div>
           </div>
           <div class="about-highlight">
