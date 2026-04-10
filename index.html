@@ -7,7 +7,45 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    .contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-button i {
+  color: #f4b6c2;
+  font-size: 1rem;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(91, 110, 138, 0.14);
+}
+
+@media (max-width: 640px) {
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+}
   /* ABOUT SECTION */
 #about {
   text-align: center;
@@ -885,37 +923,26 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <h2>Contact</h2>
-        <p>I’m open to internship and early-career opportunities in analytics, business intelligence, and data-focused roles.</p>
-      </div>
-    </div>
+       <h3>Get in touch</h3>
 
-    <div class="contact-layout">
-      <div class="contact-intro card">
-        <h3>Let’s connect</h3>
-        <p>
-          Thanks for taking a look at my portfolio. I’m currently interested in opportunities where I can continue building my technical skills and contribute to real business problems through analytics and data work.
-        </p>
-      </div>
+<div class="contact-buttons">
+  <a class="contact-button" href="mailto:juliamonson222@gmail.com">
+    <i class="fas fa-envelope"></i>
+    <span>Email</span>
+  </a>
 
-      <div class="contact-card">
-        <h3>Get in touch</h3>
-        <div class="contact-item">
-          <strong>Email:</strong>
-          <a href="mailto:juliamonson222@gmail.com"> juliamonson222@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <strong>GitHub:</strong>
-          <a href="https://github.com/jewlzmonson" target="_blank" rel="noopener noreferrer"> github.com/jewlzmonson</a>
-        </div>
-        <div class="contact-item">
-          <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/julialmonson/" target="_blank" rel="noopener noreferrer"> julialmonson</a>
-        </div>
-        <div class="contact-item">
-          <strong>Location:</strong> Open to relocate
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <a class="contact-button" href="tel:6187221121">
+    <i class="fas fa-phone"></i>
+    <span>Phone</span>
+  </a>
+
+  <a class="contact-button" href="https://github.com/jewlzmonson" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+    <span>GitHub</span>
+  </a>
+
+  <a class="contact-button" href="https://www.linkedin.com/in/julialmonson/" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+</div>
